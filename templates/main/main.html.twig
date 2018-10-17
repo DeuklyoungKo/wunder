@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Wunder Coding Test
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="mainTitle">
+        <h2>Welcom! My test page</h2>
+    </div>
+    <div>
+        <a class="btn btn-primary" href="{{ asset('/info') }}" role="button">Go Test</a>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

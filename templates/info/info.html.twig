@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Wunder Coding Test
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<div class="mainTitle">
+    <h2>Information</h2>
+</div>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">step1. personal information</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">step2. address information</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">step3. payment information</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">step4. view Success</a>
+    </li>
+</ul>
+
+<div class="view1 contents visible">
+    <form class="form1">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="firstName">First name</label>
+                <input type="email" class="form-control" id="firstName" aria-describedby="firstName" placeholder="Enter First name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName," aria-describedby="lastName," placeholder="Enter lastName">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Telephone</label>
+            <input type="text" class="form-control" id="Telephone," aria-describedby="Telephone," placeholder="Enter Telephone">
+        </div>
+        <button type="submit" class="btn btn-primary">Next</button>
+    </form>
+</div>
+
+<div class="view2 contents invisible">
+    <form>
+
+        <div class="form-row">
+            <div class="form-group col-md-9">
+                <label for="address">Address including street</label>
+                <input type="text" class="form-control" id="address" aria-describedby="address" placeholder="Enter Address including street">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="houseNumber">House number</label>
+                <input type="text" class="form-control" id="houseNumber," aria-describedby="houseNumber," placeholder="Enter House number">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="zipCode">Zip code</label>
+                <input type="text" class="form-control" id="zipCode" aria-describedby="zipCode" placeholder="Enter Zip code">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city," aria-describedby="city," placeholder="Enter City">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Next</button>
+    </form>
+</div>
+
+<div class="view3 contents invisible">
+    <div class="form-group">
+        <label for="accountOwner">Account owner</label>
+        <input type="text" class="form-control" id="accountOwner," aria-describedby="accountOwner," placeholder="Enter Account owner">
+    </div>
+    <div class="form-group">
+        <label for="iban">IBAN</label>
+        <input type="text" class="form-control" id="iban," aria-describedby="iban," placeholder="Enter IBAN">
+    </div>
+    <button type="submit" class="btn btn-primary">Next</button>
+
+</div>
+
+<div class="view4 contents invisible">
+    <div>
+        - Success message, when data are successful saved<br>
+        - Show the “paymentDataId”, returnted by demo endpoint
+    </div>
+    <a class="btn btn-primary" href="{{ asset('/') }}" role="button">Go Home</a>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/info.js') }}"></script>
+{% endblock %}
