@@ -33,6 +33,10 @@ class MainController extends AbstractController
      */
     public function info()
     {
+
+        // check state
+        // check session
+
         return $this->render('info/info.html.twig',[
 
         ]);

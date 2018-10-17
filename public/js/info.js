@@ -1,3 +1,3 @@
 $( document ).ready(function() {
-    alert( "ready!" );
+    $( "li.nav-item.info" ).addClass("active");
 });
